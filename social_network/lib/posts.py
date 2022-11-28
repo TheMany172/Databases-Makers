@@ -1,0 +1,14 @@
+class Posts():
+    def __init__(self, id, title, content, number_of_views, user_account_id):
+        self.id = id
+        self.title = title
+        self.content = content
+        self.number_of_views = number_of_views
+        self.user_account_id = user_account_id
+
+    def __eq__(self, other):
+        return self.__dict__ == other.__dict__
+
+    # This method makes it look nicer when we print an Artist
+    def __repr__(self):
+        return f"Posts({self.id}, {self.title}, {self.content}, {self.number_of_views}, {self.user_account_id})"
